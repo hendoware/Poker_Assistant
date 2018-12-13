@@ -131,6 +131,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     var isStraight = false
     var isFlush = false
+    var flushCount = 0
     
     func setHandValue(_ cardOne: String, _ cardTwo: String, _ board: String) -> (String, Int) {
         
@@ -138,11 +139,12 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         var handRank = ""
         var isTrips = false
         var isPair = false
-        let boardCards = board.split(separator: ",")
+        let boardCards = board.split(separator: " ")
+//        boardOutlet.text = "\(String(boardCards))"
         //        find pairs and 3 of a kinds
         if cardOne.prefix(1) == cardTwo.prefix(1) {
 //            print("1 pair")
-            percent.text = " wins with 1 pair"
+//            percent.text = " wins with 1 pair"
             result = 2 //+cardOne.value
             handRank = "Pair"
         }
@@ -150,7 +152,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             for b in boardCards {
                 if cardOne.prefix(1) == a.prefix(1) {
 //                    print("1 pair")
-                    percent.text = " wins with 1 pair"
+//                    percent.text = " wins with 1 pair"
                     result = 2 //+cardOne.value
                     handRank = "Pair"
                     isPair = true
@@ -173,7 +175,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 if ((cardOne.prefix(1) == a.prefix(1)) && (cardOne.prefix(1) == b.prefix(1))) || (c.prefix(1) == a.prefix(1) && c.prefix(1) == b.prefix(1))  {
 //                    print(cardOne.prefix(1))
 //                    print("three of a kind")
-                    percent.text = " wins with 3 of a kind"
+//                    percent.text = " wins with 3 of a kind"
                     result = 201
                     isTrips = true
                     handRank = "Three of a kind"
@@ -186,7 +188,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
                     if (cardOne.prefix(1) == a.prefix(1)) && (cardOne.prefix(1) == b.prefix(1)) && (c.prefix(1) == b.prefix(1)) {
 //                        print(cardOne.prefix(1))
 //                        print("four of a kind")
-                        percent.text = " wins with 4 of a kind"
+//                        percent.text = " wins with 4 of a kind"
                         result = 601
                         handRank = "Four of a kind"
                     }
@@ -215,7 +217,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
                     if boardCardValues.contains(tempCard3) || cardOne.prefix(1).contains(tempCard3) || cardTwo.prefix(1).contains(tempCard3) {
                         if boardCardValues.contains(tempCard4) || cardOne.prefix(1).contains(tempCard4) || cardTwo.prefix(1).contains(tempCard4) {
                             if boardCardValues.contains(tempCard5) || cardOne.prefix(1).contains(tempCard5) || cardTwo.prefix(1).contains(tempCard5) {
-                                percent.text = " wins with a straight"
+//                                percent.text = " wins with a straight"
                                 result = 214
                                 handRank = "Straight"
                                 print("LETS GO \(handRank)")
@@ -259,6 +261,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             }
             if maxCount < suitCount {
                 maxCount = suitCount
+                flushCount = maxCount
             }
             
         }
@@ -268,7 +271,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
 //        print("card2 \(cardTwo)")
 //        print("suitcount \(maxCount)")
         if maxCount == 5 {
-            percent.text = " wins with a flush"
+//            percent.text = " wins with a flush"
             result = 229
             handRank = "Flush"
             print("LETS GO \(handRank)")
@@ -276,12 +279,13 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
             
         }
         //full house
-        if isTrips && isPair {
-            percent.text = " wins with a full house"
-            result = 401
-            handRank = "FullHouse"
-            print("LETS GO \(handRank)")
-        }
+        //broken
+//        if isTrips && isPair {
+////            percent.text = " wins with a full house"
+//            result = 401
+//            handRank = "FullHouse"
+//            print("LETS GO \(handRank)")
+//        }
         
         
         //find four of a kind?
@@ -319,16 +323,15 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         }
 
         if maxCardCount == 4 {
-            percent.text = "Hero wins with a four of a kind"
+//            percent.text = "Hero wins with a four of a kind"
             result = 601
-            print("aoihgFOURRRRRRRRR")
             handRank = "Four of a kind"
             print("LETS GO \(handRank)")
         }
         
         //straight flush
         if isFlush && isStraight {
-            percent.text = " wins with a straight flush!!!"
+//            percent.text = " wins with a straight flush!!!"
             result = 614
             handRank = "Straight Flush"
             print("LETS GO \(handRank)")
@@ -410,7 +413,18 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
         //        predictOdds(hOne!, hTwo!, community!)
         //        updateCardDeck()
         let calc = calcPostFlop(hOne!, hTwo!, community!)
-        let chance = 0.75
+        var chance = 0.80
+        if calc.0 == "Straight" || calc.0 == "Flush" || calc.0 == "Straight Flush" || calc.0 == "Four of a kind" {
+            chance = 1
+        }
+        if calc.2 <= 213 {
+            chance = 0.66
+        }
+        
+        if flushCount == 4 {
+            chance = 0.65
+        }
+        
         let noChance = (abs(1-chance)*100)
         let maybe = String(format: "%.1f", noChance)
         let winner = calc.1
@@ -418,7 +432,7 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
 //        print("\(winner): \(chance*100)% Villain \((abs(1-chance))*100)%")
         runTheDeck(2)
         if calc.0 != "" {
-            percent.text = ("\(winner): \(chance*100)% Villain \(maybe)% with a \(calc.0)")
+            percent.text = ("\(winner): \(chance*100)% to Villain \(maybe)% \n\(winner) has a \(calc.0)")
         }
 //        percent.text = ("Hero: \(chance*100)% Villain: \((abs(1-chance))*100)%")
         if handOneOutlet.text?.count != 4 || handTwoOutlet.text?.count != 4 {
@@ -447,3 +461,12 @@ class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
 
 
+/*
+ let boardCards = board.split(separator: "  ")
+ 
+ As 2s 3s
+ Ks6s
+ 
+ KdKh
+ 
+ */

@@ -377,7 +377,7 @@
                                     <action selector="resetButton:" destination="NNq-cW-7gn" eventType="touchUpInside" id="gjE-nY-rfP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are the odds?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM1-Wj-AaU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win Probability" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM1-Wj-AaU">
                                 <rect key="frame" x="8" y="257.5" width="359" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="zpp-F8-ptR"/>
