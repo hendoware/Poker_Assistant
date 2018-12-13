@@ -14,7 +14,7 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var handOne: String = ""
     var handTwo: String = ""
@@ -30,14 +30,35 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var boardOutlet: UILabel!
     @IBOutlet weak var boardInputOutlet: UITextField!
     
+    let handPicker = UIPickerView()
+    
+    let hands = ["AdKd", "4s5s", "4h5h", "6h7h", "KhQh", "QhJh", "ThJh", "2h3h", "JhJs", "QhQs", "ThTd", "9h9d"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         boardOutlet.text = ""
         deck = cardDeck.generateDeckOfCards().shuffled()
-        //        print(deck)
+        
+        handOneOutlet.inputView = handPicker
+        handPicker.delegate = self
         
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return hands.count
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return hands[row]
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        handOneOutlet.text = hands[row]
+    }
     
     func predictOdds(_ handOne: String, _ handTwo: String,_ board: String) -> String {
         

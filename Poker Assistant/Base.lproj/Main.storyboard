@@ -92,10 +92,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$USD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76t-gB-ZtC">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Currency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5t3-qy-CfD">
                                                 <rect key="frame" x="0.0" y="20.5" width="154.5" height="34.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="34.5" id="BT1-MZ-Sic"/>
+                                                    <constraint firstAttribute="height" constant="34.5" id="aOI-JE-VuY"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -103,8 +103,8 @@
                                             </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="76t-gB-ZtC" secondAttribute="trailing" id="bOm-6W-j65"/>
-                                            <constraint firstItem="76t-gB-ZtC" firstAttribute="leading" secondItem="I8K-QH-ik3" secondAttribute="leading" id="qoi-WB-lSq"/>
+                                            <constraint firstItem="5t3-qy-CfD" firstAttribute="leading" secondItem="I8K-QH-ik3" secondAttribute="leading" id="79S-bo-dXd"/>
+                                            <constraint firstAttribute="trailing" secondItem="5t3-qy-CfD" secondAttribute="trailing" id="EST-2M-ecH"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jP9-lS-CCw">
@@ -116,10 +116,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="English" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cby-Kd-F9t">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Language" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2SY-Lx-iqh">
                                                 <rect key="frame" x="0.0" y="20.5" width="154.5" height="34.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="34.5" id="Arg-ag-aMR"/>
+                                                    <constraint firstAttribute="height" constant="34.5" id="1Jg-kL-K1W"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -127,8 +127,8 @@
                                             </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="cby-Kd-F9t" firstAttribute="leading" secondItem="jP9-lS-CCw" secondAttribute="leading" id="MEr-jK-GTd"/>
-                                            <constraint firstAttribute="trailing" secondItem="cby-Kd-F9t" secondAttribute="trailing" id="b4G-kU-fZp"/>
+                                            <constraint firstAttribute="trailing" secondItem="2SY-Lx-iqh" secondAttribute="trailing" id="5ew-c7-iBl"/>
+                                            <constraint firstItem="2SY-Lx-iqh" firstAttribute="leading" secondItem="jP9-lS-CCw" secondAttribute="leading" id="Py7-hb-owP"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -174,6 +174,12 @@
                         <viewLayoutGuide key="safeArea" id="C5s-Ah-7PI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gears" selectedImage="gears" id="EvO-EO-xDA"/>
+                    <connections>
+                        <outlet property="currencyText" destination="5t3-qy-CfD" id="h0p-RM-vNq"/>
+                        <outlet property="dateText" destination="JuT-uh-YEe" id="YGT-jS-GBc"/>
+                        <outlet property="languageText" destination="2SY-Lx-iqh" id="8W2-Ft-yyl"/>
+                        <outlet property="timeText" destination="Fyx-Af-unk" id="0Vj-eY-bol"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvB-db-wwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
