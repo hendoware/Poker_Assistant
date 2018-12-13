@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B3849A521BF286900596C30 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3849A421BF286900596C30 /* TabBarViewController.swift */; };
 		7B3849A721BF287500596C30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3849A621BF287500596C30 /* HomeViewController.swift */; };
-		7B3849A921BF28AE00596C30 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3849A821BF28AE00596C30 /* SessionViewController.swift */; };
+		7B3849A921BF28AE00596C30 /* SessionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3849A821BF28AE00596C30 /* SessionDetailViewController.swift */; };
 		7B3849AD21BF28F900596C30 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3849AC21BF28F900596C30 /* CalculatorViewController.swift */; };
 		7B3849AF21BF292500596C30 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3849AE21BF292500596C30 /* SettingsViewController.swift */; };
 		7B3849B121BF2B4100596C30 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3849B021BF2B4100596C30 /* NotesViewController.swift */; };
@@ -18,12 +18,17 @@
 		7B8C399E21BC711200C3D48F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C399C21BC711200C3D48F /* Main.storyboard */; };
 		7B8C39A021BC711800C3D48F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C399F21BC711800C3D48F /* Assets.xcassets */; };
 		7B8C39A321BC711800C3D48F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C39A121BC711800C3D48F /* LaunchScreen.storyboard */; };
+		7B998BE621C17DE3003C1722 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B998BE521C17DE3003C1722 /* SwipingController.swift */; };
+		7B998C0621C24A9D003C1722 /* SessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B998C0521C24A9D003C1722 /* SessionTableViewController.swift */; };
+		7B998C0821C24C12003C1722 /* SessionThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B998C0721C24C12003C1722 /* SessionThread.swift */; };
+		7B998C0C21C24E10003C1722 /* SessionThreadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B998C0B21C24E10003C1722 /* SessionThreadController.swift */; };
+		7B998C0F21C2552D003C1722 /* SessionThreadsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B998C0E21C2552D003C1722 /* SessionThreadsTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B3849A421BF286900596C30 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7B3849A621BF287500596C30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		7B3849A821BF28AE00596C30 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		7B3849A821BF28AE00596C30 /* SessionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailViewController.swift; sourceTree = "<group>"; };
 		7B3849AC21BF28F900596C30 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		7B3849AE21BF292500596C30 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7B3849B021BF2B4100596C30 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +39,11 @@
 		7B8C399F21BC711800C3D48F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B8C39A221BC711800C3D48F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B8C39A421BC711800C3D48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B998BE521C17DE3003C1722 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
+		7B998C0521C24A9D003C1722 /* SessionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewController.swift; sourceTree = "<group>"; };
+		7B998C0721C24C12003C1722 /* SessionThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionThread.swift; sourceTree = "<group>"; };
+		7B998C0B21C24E10003C1722 /* SessionThreadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionThreadController.swift; sourceTree = "<group>"; };
+		7B998C0E21C2552D003C1722 /* SessionThreadsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionThreadsTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,19 +77,48 @@
 			isa = PBXGroup;
 			children = (
 				7B8C399821BC711200C3D48F /* AppDelegate.swift */,
-				7B3849A421BF286900596C30 /* TabBarViewController.swift */,
-				7B3849A621BF287500596C30 /* HomeViewController.swift */,
-				7B3849A821BF28AE00596C30 /* SessionViewController.swift */,
-				7B3849AC21BF28F900596C30 /* CalculatorViewController.swift */,
-				7B3849AE21BF292500596C30 /* SettingsViewController.swift */,
-				7B3849B021BF2B4100596C30 /* NotesViewController.swift */,
-				7B3849B221C0776900596C30 /* Deck.swift */,
+				7B998C0921C24C20003C1722 /* View Controllers */,
+				7B998C0A21C24C2F003C1722 /* Models & Controllers */,
 				7B8C399C21BC711200C3D48F /* Main.storyboard */,
 				7B8C399F21BC711800C3D48F /* Assets.xcassets */,
 				7B8C39A121BC711800C3D48F /* LaunchScreen.storyboard */,
 				7B8C39A421BC711800C3D48F /* Info.plist */,
 			);
 			path = "Poker Assistant";
+			sourceTree = "<group>";
+		};
+		7B998C0921C24C20003C1722 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B3849A421BF286900596C30 /* TabBarViewController.swift */,
+				7B3849A621BF287500596C30 /* HomeViewController.swift */,
+				7BC5A38121C259AB00CF490A /* Session */,
+				7B3849AC21BF28F900596C30 /* CalculatorViewController.swift */,
+				7B3849AE21BF292500596C30 /* SettingsViewController.swift */,
+				7B3849B021BF2B4100596C30 /* NotesViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7B998C0A21C24C2F003C1722 /* Models & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B3849B221C0776900596C30 /* Deck.swift */,
+				7B998C0721C24C12003C1722 /* SessionThread.swift */,
+				7B998C0B21C24E10003C1722 /* SessionThreadController.swift */,
+				7B998BE521C17DE3003C1722 /* SwipingController.swift */,
+			);
+			path = "Models & Controllers";
+			sourceTree = "<group>";
+		};
+		7BC5A38121C259AB00CF490A /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				7B998C0E21C2552D003C1722 /* SessionThreadsTVC.swift */,
+				7B998C0521C24A9D003C1722 /* SessionTableViewController.swift */,
+				7B3849A821BF28AE00596C30 /* SessionDetailViewController.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,11 +193,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3849A521BF286900596C30 /* TabBarViewController.swift in Sources */,
-				7B3849A921BF28AE00596C30 /* SessionViewController.swift in Sources */,
+				7B3849A921BF28AE00596C30 /* SessionDetailViewController.swift in Sources */,
+				7B998C0621C24A9D003C1722 /* SessionTableViewController.swift in Sources */,
 				7B8C399921BC711200C3D48F /* AppDelegate.swift in Sources */,
 				7B3849AD21BF28F900596C30 /* CalculatorViewController.swift in Sources */,
 				7B3849B321C0776900596C30 /* Deck.swift in Sources */,
 				7B3849B121BF2B4100596C30 /* NotesViewController.swift in Sources */,
+				7B998C0821C24C12003C1722 /* SessionThread.swift in Sources */,
+				7B998C0C21C24E10003C1722 /* SessionThreadController.swift in Sources */,
+				7B998C0F21C2552D003C1722 /* SessionThreadsTVC.swift in Sources */,
+				7B998BE621C17DE3003C1722 /* SwipingController.swift in Sources */,
 				7B3849A721BF287500596C30 /* HomeViewController.swift in Sources */,
 				7B3849AF21BF292500596C30 /* SettingsViewController.swift in Sources */,
 			);
