@@ -18,16 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WdT-OE-dHh">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="O98-lj-wgY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poker Assistant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPy-Jb-SIZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="GgA-Cp-RFE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Poker-Spade-icon" translatesAutoresizingMaskIntoConstraints="NO" id="WdT-OE-dHh">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="587"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rPy-Jb-SIZ" firstAttribute="leading" secondItem="O98-lj-wgY" secondAttribute="leading" id="5v0-WC-HyF"/>
+                                    <constraint firstAttribute="trailing" secondItem="rPy-Jb-SIZ" secondAttribute="trailing" id="hbb-Kl-7xo"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.58361637592315674" green="0.64758652448654175" blue="0.65096753835678101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WdT-OE-dHh" secondAttribute="bottom" constant="8" id="Nwh-0a-taC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WdT-OE-dHh" secondAttribute="trailing" constant="8" id="S14-Wa-bxl"/>
-                            <constraint firstItem="WdT-OE-dHh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="chH-lT-Scg"/>
-                            <constraint firstItem="WdT-OE-dHh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="i9i-aa-7QH"/>
+                            <constraint firstItem="O98-lj-wgY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JnI-Pp-axc"/>
+                            <constraint firstAttribute="bottom" secondItem="O98-lj-wgY" secondAttribute="bottom" id="SCO-pi-IYO"/>
+                            <constraint firstAttribute="trailing" secondItem="O98-lj-wgY" secondAttribute="trailing" id="WBA-WJ-CPR"/>
+                            <constraint firstItem="O98-lj-wgY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d7j-du-kks"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -37,4 +55,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Poker-Spade-icon" width="768" height="768"/>
+    </resources>
 </document>

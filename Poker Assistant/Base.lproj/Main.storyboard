@@ -209,14 +209,17 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="plL-b5-He0">
-                                        <rect key="frame" x="0.0" y="38" width="359" height="474"/>
+                                        <rect key="frame" x="0.0" y="38" width="359" height="462.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjI-Hg-ag6">
-                                        <rect key="frame" x="0.0" y="520" width="359" height="30"/>
+                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjI-Hg-ag6">
+                                        <rect key="frame" x="0.0" y="508.5" width="359" height="41.5"/>
                                         <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41.5" id="e0Y-9u-LDv"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,21 +230,21 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="2V3-Zu-dNK" secondAttribute="trailing" id="99y-Im-Mrv"/>
-                                    <constraint firstAttribute="trailing" secondItem="XjI-Hg-ag6" secondAttribute="trailing" id="iaD-o7-Mgh"/>
-                                    <constraint firstItem="XjI-Hg-ag6" firstAttribute="leading" secondItem="vNE-rp-a96" secondAttribute="leading" id="msc-fx-aU6"/>
-                                    <constraint firstItem="2V3-Zu-dNK" firstAttribute="leading" secondItem="vNE-rp-a96" secondAttribute="leading" id="uH8-4k-bfD"/>
+                                    <constraint firstItem="XjI-Hg-ag6" firstAttribute="leading" secondItem="vNE-rp-a96" secondAttribute="leading" id="0xn-WS-Rrx"/>
+                                    <constraint firstItem="2V3-Zu-dNK" firstAttribute="leading" secondItem="vNE-rp-a96" secondAttribute="leading" id="cW9-w8-jh9"/>
+                                    <constraint firstAttribute="trailing" secondItem="2V3-Zu-dNK" secondAttribute="trailing" id="hoa-dT-voC"/>
+                                    <constraint firstAttribute="trailing" secondItem="XjI-Hg-ag6" secondAttribute="trailing" id="iVU-Ce-kyy"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vNE-rp-a96" firstAttribute="centerX" secondItem="k9o-Qe-re7" secondAttribute="centerX" id="9bZ-oR-Hev"/>
-                            <constraint firstItem="vNE-rp-a96" firstAttribute="top" secondItem="k9o-Qe-re7" secondAttribute="top" constant="60" id="Zuz-tz-v6C"/>
-                            <constraint firstItem="EuU-5D-Qgv" firstAttribute="bottom" secondItem="vNE-rp-a96" secondAttribute="bottom" constant="8" id="auf-wa-HwL"/>
-                            <constraint firstItem="vNE-rp-a96" firstAttribute="centerX" secondItem="1aJ-7C-wkv" secondAttribute="centerX" id="bbI-d2-2ao"/>
-                            <constraint firstItem="vNE-rp-a96" firstAttribute="top" secondItem="1aJ-7C-wkv" secondAttribute="bottom" constant="11" id="j7Y-uj-BPk"/>
-                            <constraint firstItem="vNE-rp-a96" firstAttribute="leading" secondItem="EuU-5D-Qgv" secondAttribute="leading" constant="8" id="qgH-ih-qiu"/>
+                            <constraint firstItem="vNE-rp-a96" firstAttribute="top" secondItem="1aJ-7C-wkv" secondAttribute="bottom" constant="11" id="6m1-Ta-pTH"/>
+                            <constraint firstItem="vNE-rp-a96" firstAttribute="centerX" secondItem="k9o-Qe-re7" secondAttribute="centerX" id="8oZ-Qf-qHL"/>
+                            <constraint firstItem="vNE-rp-a96" firstAttribute="top" secondItem="k9o-Qe-re7" secondAttribute="top" constant="60" id="EMp-TH-u2E"/>
+                            <constraint firstItem="EuU-5D-Qgv" firstAttribute="bottom" secondItem="vNE-rp-a96" secondAttribute="bottom" constant="8" id="OPw-Ro-T6m"/>
+                            <constraint firstItem="vNE-rp-a96" firstAttribute="leading" secondItem="EuU-5D-Qgv" secondAttribute="leading" constant="8" id="PeU-CA-EXW"/>
+                            <constraint firstItem="vNE-rp-a96" firstAttribute="centerX" secondItem="1aJ-7C-wkv" secondAttribute="centerX" id="qZc-K1-UIC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EuU-5D-Qgv"/>
                     </view>
@@ -355,7 +358,7 @@
                                     <constraint firstItem="5ag-R2-Xmp" firstAttribute="width" secondItem="W3Q-FM-PkC" secondAttribute="width" id="TF6-a4-B1n"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMJ-sB-95A">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMJ-sB-95A">
                                 <rect key="frame" x="8" y="510" width="359" height="30"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
@@ -366,7 +369,7 @@
                                     <action selector="calculate:" destination="NNq-cW-7gn" eventType="touchUpInside" id="Ogp-IX-nlh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ra-Ab-Jnl">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ra-Ab-Jnl">
                                 <rect key="frame" x="8" y="548" width="359" height="30"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
@@ -741,7 +744,7 @@
                                     <constraint firstItem="35S-Vg-PAS" firstAttribute="width" secondItem="HN1-zJ-xeG" secondAttribute="width" id="UfW-qp-SCU"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-vC-PDf">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-vC-PDf">
                                 <rect key="frame" x="8" y="439.5" width="359" height="41.5"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
